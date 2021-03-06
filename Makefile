@@ -1,3 +1,3 @@
-chessviz:	test.cpp
-	g++ -o main -Wall -Werror test.cpp
-	./main
+test:	test.cpp
+	g++ -o test -Wall -Werror test.cpp
+	./test
