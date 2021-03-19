@@ -1,1 +1,4 @@
-test.exe
+*.a
+*.d
+*.o
+bin/chessviz
