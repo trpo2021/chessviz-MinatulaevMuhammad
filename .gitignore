@@ -1,4 +1,7 @@
 *.a
 *.d
 *.o
-bin/chessviz
+*.exe
+*.out
+
+.vscode
