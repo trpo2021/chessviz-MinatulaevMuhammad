@@ -1,3 +1,3 @@
 #pragma once
 
-char move(char chessboard[11][11])
+char move(char chessboard[11][11]);

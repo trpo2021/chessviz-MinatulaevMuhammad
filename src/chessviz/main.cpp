@@ -1,6 +1,6 @@
 #include <iostream>
-#include <libchessviz/move.h>
-#include <libchessviz/print.h>
+#include <../libchessviz/move.h>
+#include <../libchessviz/print.h>
 using namespace std;
 int main()
 {
