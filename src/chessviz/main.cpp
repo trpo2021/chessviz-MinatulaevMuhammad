@@ -1,6 +1,9 @@
+
 #include <iostream>
 #include <libchessviz/move.h>
 #include <libchessviz/print.h>
+using namespace std;
+
 int main()
 {
     char chessboard[11][11]
