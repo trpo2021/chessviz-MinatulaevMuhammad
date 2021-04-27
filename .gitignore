@@ -9,5 +9,8 @@
 *.d
 *#*
 
+tags
+test
+test++
 bin/chessviz
 .vscode
