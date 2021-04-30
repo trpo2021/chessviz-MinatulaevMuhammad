@@ -4,67 +4,71 @@
 #include <stdio.h>
 using namespace std;
 
-char move(char chessboard[11][11])
+char move(char chessboard[10][10], int testing, char scantest[])
 {
-    char sline1, sline2, temp;
-    int column1, column2, rline1, rline2, flag;
-
-    cin >> sline1;
-    cin >> column1;
-    cin >> sline2;
-    cin >> column2;
+    char sstrok1, sstrok2, temp;
+    int stab1, stab2, rstrok1, rstrok2, flag;
+    if (testing == 0)
+        cin >> sstrok1;
+    cin >> stab1;
+    cin >> sstrok2;
+    cin >> stab2;
+    else
+    {
+        sstrok1 = scantest[0];
+        stab1 = scantest[1];
+        sstrok2 = scantest[2];
+        stab2 = scantest[3];
+    }
     flag = 0;
-    if (sline1 == 'a')
-        rline1 = 1;
-    else if (sline1 == 'b')
-        rline1 = 2;
-    else if (sline1 == 'c')
-        rline1 = 3;
-    else if (sline1 == 'd')
-        rline1 = 4;
-    else if (sline1 == 'e')
-        rline1 = 5;
-    else if (sline1 == 'f')
-        rline1 = 6;
-    else if (sline1 == 'g')
-        rline1 = 7;
-    else if (sline1 == 'h')
-        rline1 = 8;
+    if (sstrok1 == 'a')
+        rstrok1 = 1;
+    else if (sstrok1 == 'b')
+        rstrok1 = 2;
+    else if (sstrok1 == 'c')
+        rstrok1 = 3;
+    else if (sstrok1 == 'd')
+        rstrok1 = 4;
+    else if (sstrok1 == 'e')
+        rstrok1 = 5;
+    else if (sstrok1 == 'f')
+        rstrok1 = 6;
+    else if (sstrok1 == 'g')
+        rstrok1 = 7;
+    else if (sstrok1 == 'h')
+        rstrok1 = 8;
     else
         flag = 1;
 
-    if (sline2 == 'a')
-        rline2 = 1;
-    else if (sline2 == 'b')
-        rline2 = 2;
-    else if (sline2 == 'c')
-        rline2 = 3;
-    else if (sline2 == 'd')
-        rline2 = 4;
-    else if (sline2 == 'e')
-        rline2 = 5;
-    else if (sline2 == 'f')
-        rline2 = 6;
-    else if (sline2 == 'g')
-        rline2 = 7;
-    else if (sline2 == 'h')
-        rline2 = 8;
+    if (sstrok2 == 'a')
+        rstrok2 = 1;
+    else if (sstrok2 == 'b')
+        rstrok2 = 2;
+    else if (sstrok2 == 'c')
+        rstrok2 = 3;
+    else if (sstrok2 == 'd')
+        rstrok2 = 4;
+    else if (sstrok2 == 'e')
+        rstrok2 = 5;
+    else if (sstrok2 == 'f')
+        rstrok2 = 6;
+    else if (sstrok2 == 'g')
+        rstrok2 = 7;
+    else if (sstrok2 == 'h')
+        rstrok2 = 8;
     else
         flag = 1;
 
-    if (column1 < 1 && column1 > 8)
+    if (!(stab1 >= 1 && stab1 <= 8))
         flag = 1;
-    // trash = flag;
 
-    if (column2 < 1 && column2 > 8)
+    if (!(stab2 >= 1 && stab2 <= 8))
         flag = 1;
-    // trash = flag;
 
     if (flag == 0) {
-        temp = chessboard[column1 - 1][rline1];
-        chessboard[column1 - 1][rline1] = ' ';
-        chessboard[column2 - 1][rline2] = temp;
-        print(chessboard);
+        temp = chessboard[stab1 - 1][rstrok1];
+        chessboard[stab1 - 1][rstrok1] = ' ';
+        chessboard[stab2 - 1][rstrok2] = temp;
     }
 
     return chessboard[9][10];
