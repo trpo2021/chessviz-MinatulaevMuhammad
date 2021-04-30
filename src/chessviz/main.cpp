@@ -6,6 +6,11 @@ using namespace std;
 
 int main()
 {
+     char sline1='p';
+     char sline2='p';
+
+     int column1=2;
+     int column2=3;
     char chessboard[11][11]
             = {"1rnbqkbnr",
                "2pppppppp",
@@ -17,7 +22,7 @@ int main()
                "8RNBQKBNR"};
     print(chessboard);
     while (1) {
-        move(chessboard);
+        move(chessboard,"p","p",2,3);
     }
     return 0;
 }
