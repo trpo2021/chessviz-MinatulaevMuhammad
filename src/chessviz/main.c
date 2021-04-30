@@ -1,12 +1,10 @@
 
-#include <iostream>
 #include <libchessviz/move.h>
 #include <libchessviz/print.h>
-using namespace std;
-
+#include <stdio.h>
 int main()
 {
-    char chessboard[11][11]
+    char chess[10][10]
             = {"1rnbqkbnr",
                "2pppppppp",
                "3        ",
@@ -14,10 +12,13 @@ int main()
                "5        ",
                "6        ",
                "7PPPPPPPP",
-               "8RNBQKBNR"};
-    print(chessboard);
+               "8RNBQKBNR",
+               " ABCDEFGH"};
+    PrintBoard(chess);
     while (1) {
-        move(chessboard);
+        move(chess, 0, NULL);
+        PrintBoard(chess);
     }
+
     return 0;
 }
