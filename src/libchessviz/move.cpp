@@ -4,10 +4,10 @@
 #include <stdio.h>
 using namespace std;
 
-char move(char chessboard[11][11],char sline1,char sline2,int column1,int column2)
+char move(char chessboard[11][11])
 {
-    char  temp;
-    int  rline1, rline2, flag;
+    char sline1, sline2, temp;
+    int column1, column2, rline1, rline2, flag;
 
     cin >> sline1;
     cin >> column1;
