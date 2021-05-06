@@ -67,5 +67,5 @@ char move(char chessboard[11][11])
         print(chessboard);
     }
 
-    return chessboard[9][10];
+    return chessboard[11][11];
 }
